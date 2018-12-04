@@ -23,5 +23,8 @@ locations <- read_csv("NCEI-0129877_US_SSL_Sites.csv")
 
 # join the counts and the locations
 
-pups <- left_join(pups_long, locations, by=c("sitename" = "SITENAME"))
+pups <- left_join(pups_long, locations, by=c("sitename" = "SITENAME")) %>% 
+  filter(year == 2015) %>% 
+  select(sitename,year,count,LATITUDE,LONGITUDE)
+
 
