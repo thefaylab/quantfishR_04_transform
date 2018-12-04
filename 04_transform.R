@@ -19,7 +19,7 @@ pups_long
 
 # join data
 locations <- read_csv("NCEI-0129877_US_SSL_Sites.csv") %>% 
-  tolower()
+  tolower(names())
 
 
 # join the counts and the locations
