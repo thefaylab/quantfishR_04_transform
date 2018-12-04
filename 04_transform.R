@@ -31,6 +31,6 @@ pups <- left_join(pups_long, locations, by=c("sitename" = "SITENAME")) %>%
 ### do some maps of counts
 
 mylocation <- c(-180,55,-130,65)
-
+my_map <- get_stamenmap(mylocation, zoom = 6, maptype = "watercolor")
 
 
