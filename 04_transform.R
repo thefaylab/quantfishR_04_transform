@@ -43,7 +43,8 @@ ggmap(my_map) +
   ylab("Latitude")
 
 
-my_map <- get_map(mylocation, zoom = 6, maptype = "satellite")+
+my_map <- get_map(mylocation, zoom = 6, maptype = "satellite")
+ggmap(my_map) +
   geom_point(data = pups,
              aes(x = longitude, y = latitude, size = count),
              alpha = 0.5, shape = 21, fill = "orange") +
