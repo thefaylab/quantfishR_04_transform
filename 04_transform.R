@@ -18,6 +18,11 @@ pups_spread <- spread(pups_long, key="year", value = "count")
 pups_long
 
 # join data
-locations <- read_csv("NCEI-0129877_US_SSL_Sites.csv")
+locations <- read_csv("NCEI-0129877_US_SSL_Sites.csv") %>% 
+  tolower()
 
+
+# join the counts and the locations
+
+pups <- left_join(pups_long, locations)
 
