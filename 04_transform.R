@@ -46,7 +46,7 @@ ggmap(my_map) +
 my_map <- get_map(mylocation, zoom = 6, maptype = "satellite")+
   geom_point(data = pups,
              aes(x = longitude, y = latitude, size = count),
-             alpha = 0.5, shape = 21, fill = "darkgray") +
+             alpha = 0.5, shape = 21, fill = "orange") +
   ggtitle("Steller sea lion pup counts 2015") +
   xlab("Longitude") +
   ylab("Latitude")
