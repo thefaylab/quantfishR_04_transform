@@ -16,3 +16,8 @@ pups_long <- gather(pups_wide, key = "year", value = "count", -sitename) %>%
 pups_spread <- spread(pups_long, key="year", value = "count")
 
 pups_long
+
+# join data
+location <- read_csv("NCEI-0129877_US_SSL_Sites.csv")
+
+
