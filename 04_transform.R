@@ -25,6 +25,8 @@ locations <- read_csv("NCEI-0129877_US_SSL_Sites.csv")
 
 pups <- left_join(pups_long, locations, by=c("sitename" = "SITENAME")) %>% 
   filter(year == 2015) %>% 
-  select(sitename,year,count,LATITUDE,LONGITUDE)
+  select(sitename,year,count,LATITUDE,LONGITUDE) %>% 
+  rename_all(tolower)
+
 
 
