@@ -13,5 +13,6 @@ pups_wide <- read_csv("SSLpupcounts.csv")
 pups_long <- gather(pups_wide, key = "year", value = "count", -sitename) %>% 
   drop_na()
 
+pups_spread <- spread(pups_long, key="year", value = "count")
 
-
+pups_long
