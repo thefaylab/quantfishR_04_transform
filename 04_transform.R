@@ -37,6 +37,11 @@ my_map <- get_stamenmap(mylocation, zoom = 6, maptype = "watercolor")
 ggmap(my_map) +
   geom_point(data = pups,
              aes(x = longitude, y = latitude, size = count),
-             alpha = 0.5, shape = 21, col = "darkgray")
+             alpha = 0.5, shape = 21, col = "darkgray") +
+  ggtitle("Steller sea lion pup counts 2015") +
+  xlab("Longitude") +
+  ylab("Latitude")
+
+
 
 
