@@ -43,5 +43,8 @@ ggmap(my_map) +
   ylab("Latitude")
 
 
+my_map <- get_map(mylocation, zoom = 6, maptype = "satellite")
+
+
 
 
