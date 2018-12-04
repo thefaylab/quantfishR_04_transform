@@ -28,5 +28,9 @@ pups <- left_join(pups_long, locations, by=c("sitename" = "SITENAME")) %>%
   select(sitename,year,count,LATITUDE,LONGITUDE) %>% 
   rename_all(tolower)
 
+### do some maps of counts
+
+
+
 
 
