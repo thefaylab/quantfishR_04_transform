@@ -34,6 +34,8 @@ mylocation <- c(-180,50,-130,65)
 my_map <- get_stamenmap(mylocation, zoom = 6, maptype = "watercolor")
 
 # map and add counts
-ggmap(my_map)
+ggmap(my_map) +
+  geom_point(data = pups,
+             aes(x = longitude, y = latitude, size = count))
 
 
